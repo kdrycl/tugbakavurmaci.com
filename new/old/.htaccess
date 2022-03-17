@@ -1,0 +1,30 @@
+RewriteEngine on
+
+Rewriterule ^hizmetlerimiz/([0-9a-zA-Z-_]+)$ hizmet-detay.php?slug=$1 [L]
+
+Rewriterule ^kurumsal kurumsal.php [L]
+Rewriterule ^iletisim iletisim.php [L]
+Rewriterule ^bloglar blogs.php [L]
+Rewriterule ^blog/kategori/([0-9a-zA-Z-_]+)$ blogs.php?categorySlug=$1 [L]
+Rewriterule ^blog/etiket/([0-9a-zA-Z-_]+)$ blogs.php?tagSlug=$1 [L]
+Rewriterule ^kategori/([0-9a-zA-Z-_]+)$ services.php?servicesCategory=$1 [L]
+Rewriterule ^blog/([0-9a-zA-Z-_]+)-([0-9a-zA-Z-_]+)$ blog-detail.php?slug=$1&uniqueId=$2 [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

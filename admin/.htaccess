@@ -1,0 +1,88 @@
+RewriteOptions inherit
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css|woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+ 
+
+
+
+<ifmodule mod_headers.c>
+Header always edit Set-Cookie ^(.*)$ $1;SameSite=None;Secure
+</ifmodule> 
+
+
+RewriteEngine on
+Rewriterule ^giris-yap login.php [L]
+Rewriterule ^processing dbclass/operations.php [L]
+Rewriterule ^anasayfa index.php [L]
+Rewriterule ^kullanicilari-listele user-list.php [L]
+Rewriterule ^yeni-kullanici user-add.php [L]
+Rewriterule ^kullanici-bilgileri-([0-9a-zA-Z-_]+)$ user-detail.php?id=$1 [L]
+Rewriterule ^yeni-urun product-add.php [L]
+Rewriterule ^urunleri-listele product-list.php [L]
+Rewriterule ^urun-detay-([0-9a-zA-Z-_]+)-([0-9a-zA-Z-_]+)$ product-detail.php?uniqueId=$1&langCode=$2 [L]
+Rewriterule ^dilleri-listele languages-list.php [L]
+Rewriterule ^dil-bilgileri-([0-9a-zA-Z-_]+)$ language-detail.php?id=$1 [L]
+Rewriterule ^firma-bilgileri company-details.php [L]
+
+Rewriterule ^kategorileri-listele category-list.php [L]
+Rewriterule ^yeni-kategori category-add.php [L]
+Rewriterule ^kategori-detay-([0-9a-zA-Z-_]+)-([0-9a-zA-Z-_]+)$ category-detail.php?uniqueId=$1&langCode=$2 [L]
+Rewriterule ^etiketleri-listele tags-list.php [L]
+Rewriterule ^bloglari-listele blog-list.php [L]
+Rewriterule ^yeni-blog blog-add.php [L]
+Rewriterule ^blog-duzenle-([0-9a-zA-Z-_]+)$ blog-detail.php?id=$1 [L]
+Rewriterule ^galeri-listele slider-list.php [L]
+Rewriterule ^galeri-islemleri-([0-9a-zA-Z-_]+)$ slider-page.php?id=$1 [L]
+Rewriterule ^sayfalari-listele page-list.php [L]
+Rewriterule ^yeni-sayfa page-add.php [L]
+Rewriterule ^sayfa-detay-([0-9a-zA-Z-_]+)-([0-9a-zA-Z-_]+)$ page-detail.php?uniqueId=$1&langCode=$2 [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rewriterule ^iletisim-bilgileri contact-page.php [L]
+Rewriterule ^bos-sayfa blank-page.php [L]
+Rewriterule ^urun-ekle new-product.php [L]
+Rewriterule ^kategorileri-listele category-list.php [L]
+Rewriterule ^guvence-paketleri-listele assurance-list.php [L]
+Rewriterule ^guvence-islemleri-ekle assurance-page.php?ekle=1 [L]
+Rewriterule ^guvence-islemleri-([0-9a-zA-Z-_]+)$ assurance-page.php?id=$1 [L]
+Rewriterule ^bloglari-listele blog-list.php [L]
+Rewriterule ^blog-islemleri-ekle blog-page.php?ekle=1 [L]
+Rewriterule ^blog-islemleri-([0-9a-zA-Z-_]+)$ blog-page.php?id=$1 [L]
+Rewriterule ^etiket-listele tag-list.php [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

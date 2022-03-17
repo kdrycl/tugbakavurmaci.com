@@ -1,0 +1,49 @@
+RewriteOptions inherit
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css|woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+<ifmodule mod_headers.c>
+Header always edit Set-Cookie ^(.*)$ $1;SameSite=None;Secure
+</ifmodule> 
+RewriteEngine on
+
+
+
+
+ErrorDocument 404 https://www.ustawebci.com/404
+Rewriterule ^anasayfa index.php [L]
+Rewriterule ^iletisim contact.php [L]
+Rewriterule ^tum-bloglar blogs.php [L]
+Rewriterule ^processing admin/dbclass/operations.php [L]
+Rewriterule ^site-processing deneme.php [L]
+
+
+
+Rewriterule ^sayfa/([0-9a-zA-Z-_]+)$ page-detail-2.php?slug=$1 [L]
+Rewriterule ^kategori/([0-9a-zA-Z-_]+)$ category-list.php?slug=$1 [L]
+Rewriterule ^urun/([0-9a-zA-Z-_]+)$ product-detail-2.php?slug=$1 [L]
+Rewriterule ^blog/([0-9a-zA-Z-_]+)$ blog-detail.php?slug=$1 [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
